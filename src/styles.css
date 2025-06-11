@@ -1,0 +1,75 @@
+body{
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    display: flex;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+aside{
+    background-color: #FCFAF8;
+    width: 20vw;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.btn{
+    background-color: #FCFAF8;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 5px;
+}
+
+.btn:hover{
+    background-color: #F2EFED;
+    border-radius: 5%;
+}
+
+#btnAddTask{
+    color: #DC4C3E;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.btnIcon{
+    padding-right: 5px;
+}
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+#brandHero{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#brandDes{
+    margin: 0;
+    padding: 0px 0px 20px 5px;
+    font-weight: normal;
+    font-size: 15px;
+    color: gray;
+}
+
+#projectsTitle{
+    color: gray;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.btn:active {
+  background-color: #FFEFE5;
+  color: #DC4C3E;
+}
+
