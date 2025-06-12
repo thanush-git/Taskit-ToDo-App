@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
@@ -7,19 +7,19 @@ body{
 }
 
 .container {
-  display: flex;
-  height: 100vh;
+    display: flex;
+    height: 100vh;
 }
 
-aside{
+aside {
     background-color: #FCFAF8;
     width: 20vw;
     padding: 15px;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
-.btn{
+.btn {
     background-color: #FCFAF8;
     display: flex;
     align-items: center;
@@ -27,34 +27,34 @@ aside{
     padding: 5px;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #F2EFED;
     border-radius: 5%;
 }
 
-#btnAddTask{
+#btnAddTask {
     color: #DC4C3E;
     font-weight: bold;
     font-size: medium;
 }
 
-.btnIcon{
+.btnIcon {
     padding-right: 5px;
 }
 
-.titles{
+.titles {
     display: flex;
     flex-direction: column;
     padding-left: 10px;
 }
 
-#brandHero{
+#brandHero {
     margin: 0;
     display: flex;
     align-items: center;
 }
 
-#brandDes{
+#brandDes {
     margin: 0;
     padding: 0px 0px 20px 5px;
     font-weight: normal;
@@ -62,14 +62,92 @@ aside{
     color: gray;
 }
 
-#projectsTitle{
+#projectsTitle {
     color: gray;
     font-weight: 500;
     margin-top: 30px;
 }
 
 .btn:active {
-  background-color: #FFEFE5;
-  color: #DC4C3E;
+    background-color: #FFEFE5;
+    color: #DC4C3E;
 }
 
+.modal {
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    /* Fallback color */
+
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#addTaskForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.additionalInputs{
+    flex-direction: row;
+}
+
+.lastInput{
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea{
+    resize: none;
+}
+
+.headings {
+  border: none;
+  outline: none; 
+}
+
+.headings:focus {
+  border: none;
+  outline: none;
+}
+
+#titleInput{
+    font-size: x-large;
+    font-weight: bold;
+}

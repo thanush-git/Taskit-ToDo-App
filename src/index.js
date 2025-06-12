@@ -1,5 +1,14 @@
-import { createTask } from "./createTasks.js";
-import { projects } from "./createTasks.js";
+import { initializeTaskForm } from "./addTaskForm.js";
+import { addToLocalArray } from "./saveToLocal.js"
+import { initializeProjectForm } from "./addProjects.js"
 import "./styles.css"
-createTask("Test", "This is a test description", "High", "Sunday", "Build", "New Project")
-console.log(projects);
+
+const addTaskBtn = document.querySelector("#btnAddTask");
+addTaskBtn.addEventListener("click", () => {
+    initializeTaskForm()
+})
+
+document.querySelector("#addProjectBtn").addEventListener("click", () => {
+    initializeProjectForm();
+})
+

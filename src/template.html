@@ -10,40 +10,44 @@
 
 <body>
     <div class="container">
-    <aside id="sidebar">
-        <div class="titles">
-            <h1 id="brandHero">TaskIt <img src="assets/logo.svg" alt=""></h1>
-            <h4 id="brandDes">task it, do it</h4>
-        </div>
+        <aside id="sidebar">
+            <div class="titles">
+                <h1 id="brandHero">TaskIt <img src="assets/logo.svg" alt=""></h1>
+                <h4 id="brandDes">task it, do it</h4>
+            </div>
 
-        <button class="btn" id="btnAddTask">
-            <img class="btnIcon" id="iconAddTask" src="assets/add.svg" alt="">Add task
-        </button>
+            <button class="btn" id="btnAddTask">
+                <img class="btnIcon" id="iconAddTask" src="assets/add.svg" alt="">Add task
+            </button>
 
-        <button class="btn" id="btnSearch">
-            <img class="btnIcon" id="iconSearch" src="assets/search.svg" alt="">Search
-        </button>
+            <button class="btn" id="btnSearch">
+                <img class="btnIcon" id="iconSearch" src="assets/search.svg" alt="">Search
+            </button>
 
-        <button class="btn" id="btnToday">
-            <img class="btnIcon" id="iconToday" src="assets/calendar-today.svg" alt="">Today
-        </button>
+            <button class="btn" id="btnToday">
+                <img class="btnIcon" id="iconToday" src="assets/calendar-today.svg" alt="">Today
+            </button>
 
-        <button class="btn" id="btnUpcoming">
-            <img class="btnIcon" id="iconUpcoming" src="assets/calendar.svg" alt="">Upcoming
-        </button>
+            <button class="btn" id="btnUpcoming">
+                <img class="btnIcon" id="iconUpcoming" src="assets/calendar.svg" alt="">Upcoming
+            </button>
 
-        <button class="btn" id="btnTags">
-            <img class="btnIcon" id="iconTags" src="assets/tag.svg" alt="">Tags
-        </button>
+            <button class="btn" id="btnTags">
+                <img class="btnIcon" id="iconTags" src="assets/tag.svg" alt="">Tags
+            </button>
 
-        <button class="btn" id="btnCompleted">
-            <img class="btnIcon" id="iconCompleted" src="assets/check-o.svg" alt="">Completed
-        </button>
+            <button class="btn" id="btnCompleted">
+                <img class="btnIcon" id="iconCompleted" src="assets/check-o.svg" alt="">Completed
+            </button>
 
-        <p id="projectsTitle">My Projects</p>
-    </aside>
+            <p id="projectsTitle">My Projects</p>
+            <div id="sidebarApp"></div>
+            <button id="addProjectBtn">New Project</button>
+            
+        </aside>
     </div>
-    <div id="app"></div>
+    <div id="app">
+    </div>
     <!-- Webpack will inject main.js here automatically -->
 </body>
 

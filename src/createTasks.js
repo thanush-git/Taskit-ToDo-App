@@ -1,8 +1,10 @@
+import { addToLocalArray } from './saveToLocal.js'
 import { Task } from './task.js'
 
 //An object to store projects
 let projects = {
     default : []
+    //other objects are dynamically added here, e.g, work : [taskOBJ1,....]
 }   
 
 
@@ -17,7 +19,7 @@ function createTask(title, desc, priority, due, tags, project='default'){
 function addTask(task){
     if (task.project === 'default') projects.default.push(task)  
     else (projects[task.project] ??= []).push(task);    //Nullish Coalesing Assignment: If array does not exists then it creates it
-
+    addToLocalArray(projects)
 }
 
 export { createTask, projects } 
