@@ -15,7 +15,7 @@ let InputFormProject = `
 `;
 
 function renderProjectForm() {
-  const sidebarApp = document.querySelector("#sidebarApp");
+  const sidebarApp = document.querySelector("#app");
   sidebarApp.innerHTML = InputFormProject; // append instead of overwrite
   document.querySelector("#addProject").style.display = "block"; // show modal after rendering
 }
@@ -25,7 +25,7 @@ function setupCancelHandler() {
   const cancelBtn = document.querySelector("#cancel");
 
   cancelBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+    modal.remove()
   });
 }
 
@@ -33,7 +33,7 @@ function setupWindowClickClose() {
   const modal = document.querySelector("#addProject");
   window.addEventListener("click", function (event) {
     if (event.target === modal) {
-      modal.style.display = "none";
+      modal.remove()
     }
   });
 }

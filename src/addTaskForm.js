@@ -1,6 +1,6 @@
 import { createTask } from "./createTasks.js";
 import { projects } from "./createTasks.js";
-import { addToLocalArray } from "./saveToLocal.js";
+import { getKeys } from "./getKeys.js";
 
 let InputForm = `
 <div id="addTask" class="modal">
@@ -22,8 +22,7 @@ let InputForm = `
         <div>
           <label for="projectInput">Project: </label>
           <select name="" id="projectInput">
-            <option value="default">None</option>
-            <option> populate available projects </option>
+
           </select>
         </div>
         <div class="actionBtns">
@@ -36,6 +35,16 @@ let InputForm = `
 </div>
 `;
 
+function putAllProjects() {
+  let dropDown = document.querySelector("#projectInput");  //Dropdown Select that should list all our projects
+  let keyArr = getKeys("projects");
+
+  keyArr.forEach((projectKey) => {
+    let currOption = `<option value="${projectKey}">${projectKey}</option>`;
+    dropDown.innerHTML += (currOption);
+  })
+}
+
 function renderTaskForm() {
   const app = document.querySelector("#app");
   app.innerHTML = InputForm;
@@ -46,7 +55,7 @@ function setupCancelHandler() {
   const cancelBtn = document.querySelector("#cancel");
 
   cancelBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+    modal.remove()
   });
 }
 
@@ -54,7 +63,7 @@ function setupWindowClickClose() {
   const modal = document.querySelector("#addTask");
   window.onclick = function (event) {
     if (event.target === modal) {
-      modal.style.display = "none";
+      modal.remove()
     }
   };
 }
@@ -70,18 +79,20 @@ function extractFormData() {
 }
 
 function setupFormSubmitHandler() {
+  const modal = document.querySelector("#addTask");
   const form = document.querySelector("#addTaskForm");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const [title, desc, priority, dueDate, tags, project] = extractFormData();
     createTask(title, desc, priority, dueDate, tags, project);
-    document.querySelector("#addTask").style.display = "none";
+    modal.remove()
 
   });
 }
 
 function initializeTaskForm() {
   renderTaskForm();
+  putAllProjects();
   setupCancelHandler();
   setupWindowClickClose();
   setupFormSubmitHandler();
