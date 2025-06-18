@@ -1,0 +1,58 @@
+<!-- src/template.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>TaskIt</title>
+    <link rel="stylesheet" href="84bb4fc080631c2605f1.css">
+<script defer src="main.js"></script></head>
+
+<body>
+    <div class="container">
+        <aside id="sidebar">
+            <div class="titles">
+                <h1 id="brandHero">TaskIt <img src="e6e15e13b79f3f0c1e53.svg" alt=""></h1>
+                <h4 id="brandDes">task it, do it</h4>
+            </div>
+
+            <button class="btn" id="btnAddTask">
+                <img class="btnIcon" id="iconAddTask" src="acb95638e39ab89f2968.svg" alt="">Add task
+            </button>
+
+            <button class="btn" id="btnSearch">
+                <img class="btnIcon" id="iconSearch" src="e32d0cc876a5227b30cb.svg" alt="">Search
+            </button>
+
+            <button class="btn" id="btnToday">
+                <img class="btnIcon" id="iconToday" src="bcdca6f79006cd9642db.svg" alt="">Today
+            </button>
+
+            <button class="btn" id="btnUpcoming">
+                <img class="btnIcon" id="iconUpcoming" src="3f56fed3fd3128934e10.svg" alt="">Upcoming
+            </button>
+
+            <button class="btn" id="btnTags">
+                <img class="btnIcon" id="iconTags" src="95be99e1dcfc768e977a.svg" alt="">Tags
+            </button>
+
+            <button class="btn" id="btnCompleted">
+                <img class="btnIcon" id="iconCompleted" src="16db15f6c0486f409314.svg" alt="">Completed
+            </button>
+
+            <p id="projectsTitle">My Projects</p>
+            <div id="sidebarApp"></div>
+            <button class="btn" id="addProjectBtn"><img class="btnIcon" src="b1c88a082c4a4bcea883.svg" alt="">New
+                Project</button>
+
+        </aside>
+        <div class="appContent">
+            <div id="taskContent"></div>
+            <div id="app"></div>
+        </div>
+    </div>
+
+    <!-- Webpack will inject main.js here automatically -->
+</body>
+
+</html>
