@@ -5,7 +5,7 @@ let projects = {
             {
                 title: "Create project roadmap",
                 desc: "Define milestones and deadlines for Q3 objectives.",
-                priority: "High",
+                priority: "1",
                 due: "2025-06-20",
                 tags: "planning,strategy",
                 project: "default",
@@ -16,7 +16,7 @@ let projects = {
             {
                 title: "Update client documentation",
                 desc: "Revise API usage guide and include new endpoints.",
-                priority: "Medium",
+                priority: "2",
                 due: "2025-06-18",
                 tags: "documentation,client",
                 project: "Work",
